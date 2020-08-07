@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <transitionSet
-        xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:transitionOrdering="together">
+
+    <changeBounds
+        android:duration="500"
+        android:interpolator="@android:interpolator/overshoot">
+    </changeBounds>
+
+    <fade
+        android:duration="250"
+        android:startDelay="300"
+        android:fadingMode="fade_in">
+        <targets>
+            <target android:targetId="@+id/txvTitle"/>
+        </targets>
+    </fade>
+
+    <fade
+        android:duration="100"
+        android:fadingMode="fade_out">
+        <targets>
+            <target android:targetId="@+id/txvTitle"/>
+        </targets>
+    </fade>
 
 </transitionSet>
