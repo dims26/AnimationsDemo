@@ -1,7 +1,9 @@
 package com.dims.animationsdemo
 
+import android.content.Intent
 import android.graphics.drawable.Animatable
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_animated_vector_drawable_screen.*
 
@@ -31,5 +33,10 @@ class AnimatedVectorDrawableScreen : AppCompatActivity() {
         avdImage.setImageResource(R.drawable.avd_close_to_check)
         val avdCloseToCheck = avdImage.drawable as Animatable
         avdCloseToCheck.start()
+    }
+
+    fun moveToTransitions(view: View){
+        val intent = Intent(this, TransitionsScreen::class.java)
+        startActivity(intent)
     }
 }
