@@ -39,4 +39,9 @@ class TransitionNoScenesScreen : AppCompatActivity() {
         val intent = Intent(this, KeyFrameAnimOnConstraintLayout::class.java)
         startActivity(intent)
     }
+
+    fun moveToRVAnimLibrary(view: View){
+        val intent = Intent(this, RVLibraryAnimScreen::class.java)
+        startActivity(intent)
+    }
 }
